@@ -1,121 +1,79 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Туры и трансферы</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<style>
-body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:#fff;text-align:center}
-h2{font-size:42px;margin:0 0 20px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
-p{font-size:18px;margin:0 0 40px;opacity:.9}
-.btn{display:inline-block;background:#ffd200;color:#111;padding:16px 40px;border-radius:30px;font-weight:700;text-decoration:none;transition:.3s;box-shadow:0 4px 12px rgba(0,0,0,.25)}
-.btn:hover{background:#ffc107;transform:translateY(-2px)}
-.cards{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin:50px 0}
-.card{background:#fff;border-radius:20px;overflow:hidden;width:300px;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:.3s}
-.card:hover{transform:translateY(-6px)}
-.card img{width:100%;height:200px;object-fit:cover}
-.card-body{padding:24px;color:#111}
-.card h3{margin:0 0 8px;font-size:24px}
-.price{font-size:22px;font-weight:700;color:#0072ff;margin:12px 0}
-section{padding:80px 20px}
-form input,form select{width:280px;padding:14px;margin:8px;border-radius:12px;border:none;font-size:16px}
-</style>
+  <meta charset="UTF-8">
+  <title>Приглашение на свадьбу</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* 1. Основа */
+    html,body{margin:0;font-family:'Inter',Arial,sans-serif;background:linear-gradient(135deg,#ffeef8,#ffcce0,#ffb6c1);color:#fff;text-align:center;scroll-behavior:smooth}
+    body{padding:80px 20px;position:relative}
+
+    /* 2. Плавающие сердечки */
+    .heart{position:absolute;font-size:18px;animation:float 6s infinite ease-in-out;pointer-events:none}
+    .heart:nth-child(odd){animation-duration:8s;animation-direction:reverse}
+    @keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-30px) rotate(15deg)}}
+
+    /* 3. Галерея */
+    .gallery{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:40px 0}
+    .gallery img{width:200px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+
+    /* 4. Прочее */
+    h1{font-size:42px;margin:0 0 20px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+    p{font-size:18px;margin:0 0 40px;opacity:.9}
+    .btn{display:inline-block;background:#ff69b4;color:#fff;padding:16px 40px;border-radius:30px;font-weight:700;text-decoration:none;transition:.3s;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+    .btn:hover{background:#ff1493;transform:translateY(-2px)}
+    .rsvp{margin-top:40px}
+    .rsvp input,textarea{width:280px;padding:14px;margin:8px;border-radius:12px;border:none;font-size:16px}
+    .rsvp button{width:280px;padding:14px;margin:8px;border-radius:12px;border:none;font-size:16px;background:#ff69b4;color:#fff;font-weight:700;cursor:pointer}
+    @media(max-width:600px){h1{font-size:32px}p{font-size:16px}.gallery img{width:150px}}
+  </style>
 </head>
 <body>
+  <h1>Приглашение на свадьбу</h1>
+  <p>Мы рады пригласить вас на нашу свадьбу!</p>
+  <a href="#rsvp" class="btn">Принять приглашение</a>
 
-<section>
-  <h2>Туры и трансферы по всему миру</h2>
-  <p>Бронируй онлайн за 2 минуты — без комиссий и переплат</p>
-  <a href="#form" class="btn">Забронировать сейчас</a>
-</section>
+  <!-- Много плавающих сердечек -->
+  <div class="heart" style="top:10%;left:5%;">💗</div>
+  <div class="heart" style="top:20%;left:15%;">💗</div>
+  <div class="heart" style="top:30%;left:25%;">💗</div>
+  <div class="heart" style="top:40%;left:35%;">💗</div>
+  <div class="heart" style="top:50%;left:45%;">💗</div>
+  <div class="heart" style="top:60%;left:55%;">💗</div>
+  <div class="heart" style="top:70%;left:65%;">💗</div>
+  <div class="heart" style="top:80%;left:75%;">💗</div>
+  <div class="heart" style="top:90%;left:85%;">💗</div>
+  <div class="heart" style="top:15%;left:90%;">💗</div>
+  <div class="heart" style="top:25%;left:10%;">💗</div>
+  <div class="heart" style="top:35%;left:20%;">💗</div>
+  <div class="heart" style="top:45%;left:30%;">💗</div>
+  <div class="heart" style="top:55%;left:40%;">💗</div>
+  <div class="heart" style="top:65%;left:50%;">💗</div>
+  <div class="heart" style="top:75%;left:60%;">💗</div>
+  <div class="heart" style="top:85%;left:70%;">💗</div>
+  <div class="heart" style="top:95%;left:80%;">💗</div>
+  <div class="heart" style="top:5%;left:95%;">💗</div>
+  <div class="heart" style="top:25%;left:5%;">💗</div>
 
-<section>
-  <h2>Популярные туры</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Мальдивы">
-      <div class="card-body">
-        <h3>Мальдивы</h3>
-        <div class="price">89 900 ₽</div>
-        <a href="#form" class="btn">Выбрать</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80" alt="Турция">
-      <div class="card-body">
-        <h3>Турция</h3>
-        <div class="price">39 900 ₽</div>
-        <a href="#form" class="btn">Выбрать</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Италия">
-      <div class="card-body">
-        <h3>Италия</h3>
-        <div class="price">55 900 ₽</div>
-        <a href="#form" class="btn">Выбрать</a>
-      </div>
-    </div>
+  <!-- Разные фотки -->
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=60" alt="Фото 1">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=60" alt="Фото 2">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=60" alt="Фото 3">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=60" alt="Фото 4">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=60" alt="Фото 5">
   </div>
-</section>
 
-<section>
-  <h2>Трансферы</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80" alt="Аэропорт">
-      <div class="card-body">
-        <h3>Аэропорт → Отель</h3>
-        <div class="price">1 990 ₽</div>
-        <a href="#form" class="btn">Заказать</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=800&q=80" alt="Экскурсия">
-      <div class="card-body">
-        <h3>Экскурсия на день</h3>
-        <div class="price">4 900 ₽</div>
-        <a href="#form" class="btn">Заказать</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Индивидуальный">
-      <div class="card-body">
-        <h3>Индивидуальный маршрут</h3>
-        <div class="price">7 900 ₽</div>
-        <a href="#form" class="btn">Заказать</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="form">
-  <h2>Бронирование онлайн</h2>
-  <p>Оставьте заявку — мы вышлем детали и счёт в течение 15 минут</p>
-  <form action="https://forms.tildacdn.com/proccess/" method="POST">
-    <input type="hidden" name="formsb" value="Ваши контакты">
-    <input type="text" name="Name" placeholder="Имя" required><br>
-    <input type="tel" name="Phone" placeholder="Телефон" required><br>
-    <input type="email" name="Email" placeholder="E-mail" required><br>
-    <select name="Service">
-      <option>Выберите услугу</option>
-      <option>Тур на Мальдивы</option>
-      <option>Тур в Турцию</option>
-      <option>Тур в Италию</option>
-      <option>Трансфер аэропорт → отель</option>
-      <option>Экскурсия на день</option>
-      <option>Индивидуальный маршрут</option>
-    </select><br>
-    <button type="submit" class="btn">Отправить заявку</button>
+  <form class="rsvp" id="rsvp" action="https://forms.tildacdn.com/proccess/" method="POST">
+    <input type="hidden" name="formsb" value="Приглашение на свадьбу">
+    <input type="text" name="Name" placeholder="Имя" required>
+    <input type="email" name="Email" placeholder="E-mail" required>
+    <textarea name="Message" placeholder="Сообщение"></textarea>
+    <button type="submit">Принять приглашение</button>
   </form>
-</section>
-
-<section style="padding:40px 20px;font-size:14px;opacity:.8;">
-  Контакты: +7 (999) 123-45-67 | WhatsApp | your@mail.ru<br>
-  © 2025 Ваше агентство
-</section>
-
 </body>
 </html>
+
 
 
