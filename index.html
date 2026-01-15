@@ -3,17 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Туры и трансферы</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <style>
 body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:#fff;text-align:center}
-h2{font-size:42px;margin:0 0 20px}
+h2{font-size:42px;margin:0 0 20px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
 p{font-size:18px;margin:0 0 40px;opacity:.9}
-.btn{display:inline-block;background:#ffd200;color:#111;padding:16px 40px;border-radius:30px;font-weight:700;text-decoration:none;margin-top:20px}
-.cards{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:40px 0}
-.card{background:rgba(255,255,255,.15);backdrop-filter:blur(4px);border-radius:16px;padding:20px;width:260px;box-shadow:0 4px 12px rgba(0,0,0,.25)}
-.card img{width:100%;border-radius:8px;margin-bottom:12px}
-.price{font-size:20px;font-weight:700;color:#ffd200;margin:12px 0}
+.btn{display:inline-block;background:#ffd200;color:#111;padding:16px 40px;border-radius:30px;font-weight:700;text-decoration:none;transition:.3s;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.btn:hover{background:#ffc107;transform:translateY(-2px)}
+.cards{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin:50px 0}
+.card{background:#fff;border-radius:20px;overflow:hidden;width:300px;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:.3s}
+.card:hover{transform:translateY(-6px)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-body{padding:24px;color:#111}
+.card h3{margin:0 0 8px;font-size:24px}
+.price{font-size:22px;font-weight:700;color:#0072ff;margin:12px 0}
 section{padding:80px 20px}
-form input,form select{width:260px;padding:12px;margin:8px;border-radius:8px;border:none}
+form input,form select{width:280px;padding:14px;margin:8px;border-radius:12px;border:none;font-size:16px}
 </style>
 </head>
 <body>
@@ -28,21 +33,28 @@ form input,form select{width:260px;padding:12px;margin:8px;border-radius:8px;bor
   <h2>Популярные туры</h2>
   <div class="cards">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Мальдивы">
-      <h3>Мальдивы</h3>
-      <div class="price">89 900 ₽</div>
-      <a href="#form" class="btn">Выбрать</a>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Мальдивы">
+      <div class="card-body">
+        <h3>Мальдивы</h3>
+        <div class="price">89 900 ₽</div>
+        <a href="#form" class="btn">Выбрать</a>
+      </div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=600&q=80" alt="Турция">
-      <div class="price">39 900 ₽</div>
-      <a href="#form" class="btn">Выбрать</a>
+      <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80" alt="Турция">
+      <div class="card-body">
+        <h3>Турция</h3>
+        <div class="price">39 900 ₽</div>
+        <a href="#form" class="btn">Выбрать</a>
+      </div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=600&q=80" alt="Италия">
-      <h3>Италия</h3>
-      <div class="price">55 900 ₽</div>
-      <a href="#form" class="btn">Выбрать</a>
+      <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Италия">
+      <div class="card-body">
+        <h3>Италия</h3>
+        <div class="price">55 900 ₽</div>
+        <a href="#form" class="btn">Выбрать</a>
+      </div>
     </div>
   </div>
 </section>
@@ -51,22 +63,28 @@ form input,form select{width:260px;padding:12px;margin:8px;border-radius:8px;bor
   <h2>Трансферы</h2>
   <div class="cards">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=600&q=80" alt="Аэропорт">
-      <h3>Аэропорт → Отель</h3>
-      <div class="price">1 990 ₽</div>
-      <a href="#form" class="btn">Заказать</a>
+      <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80" alt="Аэропорт">
+      <div class="card-body">
+        <h3>Аэропорт → Отель</h3>
+        <div class="price">1 990 ₽</div>
+        <a href="#form" class="btn">Заказать</a>
+      </div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=600&q=80" alt="Экскурсия">
-      <h3>Экскурсия на день</h3>
-      <div class="price">4 900 ₽</div>
-      <a href="#form" class="btn">Заказать</a>
+      <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=800&q=80" alt="Экскурсия">
+      <div class="card-body">
+        <h3>Экскурсия на день</h3>
+        <div class="price">4 900 ₽</div>
+        <a href="#form" class="btn">Заказать</a>
+      </div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="Индивидуальный">
-      <h3>Индивидуальный маршрут</h3>
-      <div class="price">7 900 ₽</div>
-      <a href="#form" class="btn">Заказать</a>
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Индивидуальный">
+      <div class="card-body">
+        <h3>Индивидуальный маршрут</h3>
+        <div class="price">7 900 ₽</div>
+        <a href="#form" class="btn">Заказать</a>
+      </div>
     </div>
   </div>
 </section>
@@ -96,6 +114,8 @@ form input,form select{width:260px;padding:12px;margin:8px;border-radius:8px;bor
   Контакты: +7 (999) 123-45-67 | WhatsApp | your@mail.ru<br>
   © 2025 Ваше агентство
 </section>
+
 </body>
 </html>
+
 
