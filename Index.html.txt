@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Туры и трансферы</title>
+<style>
+body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:#fff;text-align:center}
+h2{font-size:42px;margin:0 0 20px}
+p{font-size:18px;margin:0 0 40px;opacity:.9}
+.btn{display:inline-block;background:#ffd200;color:#111;padding:16px 40px;border-radius:30px;font-weight:700;text-decoration:none;margin-top:20px}
+.cards{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:40px 0}
+.card{background:rgba(255,255,255,.15);backdrop-filter:blur(4px);border-radius:16px;padding:20px;width:260px;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.card img{width:100%;border-radius:8px;margin-bottom:12px}
+.price{font-size:20px;font-weight:700;color:#ffd200;margin:12px 0}
+section{padding:80px 20px}
+form input,form select{width:260px;padding:12px;margin:8px;border-radius:8px;border:none}
+</style>
+</head>
+<body>
+
+<section>
+  <h2>Туры и трансферы по всему миру</h2>
+  <p>Бронируй онлайн за 2 минуты — без комиссий и переплат</p>
+  <a href="#form" class="btn">Забронировать сейчас</a>
+</section>
+
+<section>
+  <h2>Популярные туры</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Мальдивы">
+      <h3>Мальдивы</h3>
+      <div class="price">89 900 ₽</div>
+      <a href="#form" class="btn">Выбрать</a>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1533105079780-52b9be4ac207?auto=format&fit=crop&w=600&q=80" alt="Турция">
+      <h3>Турция</h3>
+      <div class="price">39 900 ₽</div>
+      <a href="#form" class="btn">Выбрать</a>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=600&q=80" alt="Италия">
+      <h3>Италия</h3>
+      <div class="price">55 900 ₽</div>
+      <a href="#form" class="btn">Выбрать</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Трансферы</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=600&q=80" alt="Аэропорт">
+      <h3>Аэропорт → Отель</h3>
+      <div class="price">1 990 ₽</div>
+      <a href="#form" class="btn">Заказать</a>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=600&q=80" alt="Экскурсия">
+      <h3>Экскурсия на день</h3>
+      <div class="price">4 900 ₽</div>
+      <a href="#form" class="btn">Заказать</a>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="Индивидуальный">
+      <h3>Индивидуальный маршрут</h3>
+      <div class="price">7 900 ₽</div>
+      <a href="#form" class="btn">Заказать</a>
+    </div>
+  </div>
+</section>
+
+<section id="form">
+  <h2>Бронирование онлайн</h2>
+  <p>Оставьте заявку — мы вышлем детали и счёт в течение 15 минут</p>
+  <form action="https://forms.tildacdn.com/proccess/" method="POST">
+    <input type="hidden" name="formsb" value="Ваши контакты">
+    <input type="text" name="Name" placeholder="Имя" required><br>
+    <input type="tel" name="Phone" placeholder="Телефон" required><br>
+    <input type="email" name="Email" placeholder="E-mail" required><br>
+    <select name="Service">
+      <option>Выберите услугу</option>
+      <option>Тур на Мальдивы</option>
+      <option>Тур в Турцию</option>
+      <option>Тур в Италию</option>
+      <option>Трансфер аэропорт → отель</option>
+      <option>Экскурсия на день</option>
+      <option>Индивидуальный маршрут</option>
+    </select><br>
+    <button type="submit" class="btn">Отправить заявку</button>
+  </form>
+</section>
+
+<section style="padding:40px 20px;font-size:14px;opacity:.8;">
+  Контакты: +7 (999) 123-45-67 | WhatsApp | your@mail.ru<br>
+  © 2025 Ваше агентство
+</section>
+
+</body>
+</html>
