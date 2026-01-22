@@ -1,79 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Приглашение на свадьбу</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    /* 1. Основа */
-    html,body{margin:0;font-family:'Inter',Arial,sans-serif;background:linear-gradient(135deg,#ffeef8,#ffcce0,#ffb6c1);color:#fff;text-align:center;scroll-behavior:smooth}
-    body{padding:80px 20px;position:relative}
-
-    /* 2. Плавающие сердечки */
-    .heart{position:absolute;font-size:18px;animation:float 6s infinite ease-in-out;pointer-events:none}
-    .heart:nth-child(odd){animation-duration:8s;animation-direction:reverse}
-    @keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-30px) rotate(15deg)}}
-
-    /* 3. Галерея */
-    .gallery{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:40px 0}
-    .gallery img{width:200px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.25)}
-
-    /* 4. Прочее */
-    h1{font-size:42px;margin:0 0 20px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
-    p{font-size:18px;margin:0 0 40px;opacity:.9}
-    .btn{display:inline-block;background:#ff69b4;color:#fff;padding:16px 40px;border-radius:30px;font-weight:700;text-decoration:none;transition:.3s;box-shadow:0 4px 12px rgba(0,0,0,.25)}
-    .btn:hover{background:#ff1493;transform:translateY(-2px)}
-    .rsvp{margin-top:40px}
-    .rsvp input,textarea{width:280px;padding:14px;margin:8px;border-radius:12px;border:none;font-size:16px}
-    .rsvp button{width:280px;padding:14px;margin:8px;border-radius:12px;border:none;font-size:16px;background:#ff69b4;color:#fff;font-weight:700;cursor:pointer}
-    @media(max-width:600px){h1{font-size:32px}p{font-size:16px}.gallery img{width:150px}}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Евгений — лендинги, правки, доработки</title>
+  <meta name="description" content="Евгений: лендинги под ключ, правки, адаптив, скорость. Примеры работ и контакты." />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <h1>Приглашение на свадьбу</h1>
-  <p>Мы рады пригласить вас на нашу свадьбу!</p>
-  <a href="#rsvp" class="btn">Принять приглашение</a>
+  <header class="wrap">
+    <div class="hero">
+      <div class="badge">Фриланс • Workzilla / Kwork</div>
+      <h1>Евгений — лендинги, правки, доработки</h1>
+      <p class="lead">
+        Делаю аккуратные лендинги и быстро чиню чужие: адаптив, формы, правки, скорость, мелкие доработки.
+        Без воды — с результатом.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#contacts">Написать в Telegram</a>
+        <a class="btn secondary" href="#works">Посмотреть работы</a>
+      </div>
 
-  <!-- Много плавающих сердечек -->
-  <div class="heart" style="top:10%;left:5%;">💗</div>
-  <div class="heart" style="top:20%;left:15%;">💗</div>
-  <div class="heart" style="top:30%;left:25%;">💗</div>
-  <div class="heart" style="top:40%;left:35%;">💗</div>
-  <div class="heart" style="top:50%;left:45%;">💗</div>
-  <div class="heart" style="top:60%;left:55%;">💗</div>
-  <div class="heart" style="top:70%;left:65%;">💗</div>
-  <div class="heart" style="top:80%;left:75%;">💗</div>
-  <div class="heart" style="top:90%;left:85%;">💗</div>
-  <div class="heart" style="top:15%;left:90%;">💗</div>
-  <div class="heart" style="top:25%;left:10%;">💗</div>
-  <div class="heart" style="top:35%;left:20%;">💗</div>
-  <div class="heart" style="top:45%;left:30%;">💗</div>
-  <div class="heart" style="top:55%;left:40%;">💗</div>
-  <div class="heart" style="top:65%;left:50%;">💗</div>
-  <div class="heart" style="top:75%;left:60%;">💗</div>
-  <div class="heart" style="top:85%;left:70%;">💗</div>
-  <div class="heart" style="top:95%;left:80%;">💗</div>
-  <div class="heart" style="top:5%;left:95%;">💗</div>
-  <div class="heart" style="top:25%;left:5%;">💗</div>
+      <div class="stats">
+        <div class="stat"><div class="num">1–3 дня</div><div class="txt">сроки на лендинг</div></div>
+        <div class="stat"><div class="num">от 1 500 ₽</div><div class="txt">правки/доработки</div></div>
+        <div class="stat"><div class="num">от 4 000 ₽</div><div class="txt">лендинг под ключ</div></div>
+      </div>
+    </div>
+  </header>
 
-  <!-- Разные фотки -->
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=60" alt="Фото 1">
-    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=60" alt="Фото 2">
-    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=60" alt="Фото 3">
-    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=60" alt="Фото 4">
-    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=60" alt="Фото 5">
-  </div>
+  <main class="wrap">
+    <section class="grid" id="services">
+      <h2>Что делаю</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Лендинг под ключ</h3>
+          <p>Структура, текстовые блоки, дизайн на уровне “нормально продаёт”, адаптив, формы, кнопки.</p>
+          <ul>
+            <li>1–7 экранов</li>
+            <li>адаптив под мобилу</li>
+            <li>CTA, заявки, контакты</li>
+          </ul>
+        </article>
 
-  <form class="rsvp" id="rsvp" action="https://forms.tildacdn.com/proccess/" method="POST">
-    <input type="hidden" name="formsb" value="Приглашение на свадьбу">
-    <input type="text" name="Name" placeholder="Имя" required>
-    <input type="email" name="Email" placeholder="E-mail" required>
-    <textarea name="Message" placeholder="Сообщение"></textarea>
-    <button type="submit">Принять приглашение</button>
-  </form>
+        <article class="card">
+          <h3>Правки и доработки</h3>
+          <p>Вставить блок, поправить верстку, переделать кнопку, привести в порядок отступы, баги, мелочи.</p>
+          <ul>
+            <li>быстро и по ТЗ</li>
+            <li>фикс багов</li>
+            <li>правки контента</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Адаптив и скорость</h3>
+          <p>Делаю, чтобы на телефоне не было “криво/косо”. Оптимизирую картинки и загрузку.</p>
+          <ul>
+            <li>mobile-first</li>
+            <li>оптимизация изображений</li>
+            <li>чистые стили</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="grid" id="works">
+      <h2>Примеры работ</h2>
+      <p class="muted">Пока здесь демо-ссылки. Как только сделаем 2–3 лендинга — подменим на реальные.</p>
+
+      <div class="cards">
+        <a class="card link" href="#" target="_blank" rel="noreferrer">
+          <h3>Лендинг: клининг</h3>
+          <p>Структура + CTA + адаптив</p>
+          <span class="tag">GitHub Pages</span>
+        </a>
+
+        <a class="card link" href="#" target="_blank" rel="noreferrer">
+          <h3>Лендинг: эксперт</h3>
+          <p>Оффер + блоки доверия + форма</p>
+          <span class="tag">GitHub Pages</span>
+        </a>
+
+        <a class="card link" href="#" target="_blank" rel="noreferrer">
+          <h3>Лендинг: продукт/сервис</h3>
+          <p>Карточки преимуществ + FAQ</p>
+          <span class="tag">GitHub Pages</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="grid" id="process">
+      <h2>Как работаем</h2>
+      <div class="steps">
+        <div class="step"><div class="dot">1</div><div><b>ТЗ</b><br/>Вы пишете задачу + примеры. Я уточняю детали.</div></div>
+        <div class="step"><div class="dot">2</div><div><b>Сборка</b><br/>Делаю черновик, показываю, правим по делу.</div></div>
+        <div class="step"><div class="dot">3</div><div><b>Сдача</b><br/>Финал, проверка, передача файлов/ссылки.</div></div>
+      </div>
+    </section>
+
+    <section class="grid" id="contacts">
+      <h2>Контакты</h2>
+      <p>Пиши — скажу по срокам и стоимости после 2–3 вопросов.</p>
+
+      <div class="contacts">
+        <div class="card">
+          <h3>Telegram</h3>
+          <p class="muted">@evg_space_engineer</p>
+          <a class="btn" href="https://t.me/evg_space_engineer" target="_blank" rel="noreferrer">
+Открыть Telegram</a>
+        </div>
+
+        <div class="card">
+          <h3>Email</h3>
+          <p class="muted">почта: serjonhero@gmail.com</p>
+          <a class="btn secondary" href="mailto:serjonhero@gmail.com">Написать на почту</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div>© <span id="y"></span> Евгений</div>
+    <div class="muted">Лендинги • правки • доработки</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-
